@@ -6,17 +6,15 @@
 		<div>
 			<h1><a href=""> KBLOG</a></h1>
 		</div>	
+		
+{%for post in posts %}		
 		<div>
-			<p>published: 01/01/2016, 12:00<p>
-			<h2><a href=""> post 1</a></2>
-			<p>blog post content <h3> goes here</h3></p>
+			<p>published: {{ pos.published_date }}</p>
+			<h2><a href="">{{ post.title }}</a></h2> 
+			<p>{{ post.text|linebreaksbr }}</p>
 		</div>
-		<div>
-			<h2><a href=""> post 2</a></2>
-		</div>
-		<div>
-			<h2><a href=""> post 3</a></2>
-		</div>
+{% endfor %}
+
 	
 	</body>
 </html>
